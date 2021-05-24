@@ -19,14 +19,6 @@ class Window2(tk.Tk):
         self.geometry("1700x800+100+80")
         self.configure(bg="gray85")
 
-class Window3(tk.Tk):
-    def __init__(self):
-        tk.Tk.__init__(self)
-        self.title("File not found")
-        self.geometry("600x400+250+100")
-        self.configure(bg="gray85")
-
-
 def configure_grid(mwin, grid_rc):
     for row in range(0,len(grid_rc[0])):
         mwin.rowconfigure(row,minsize=grid_rc[0][row])
@@ -111,11 +103,11 @@ def create_widgets(mwin,tk,messagebox):
 
     frame12, frame22, frame32, frame14 = create_frames(mwin, tk)
 
-    apple = get_image("apple.png", 40, 40)
+    apple = get_image("spectrum_finder/images/apple.png", 40, 40)
     mwin.apple = apple
-    carbon = get_image("carbon_red.png", 40, 40)
+    carbon = get_image("spectrum_finder/images/carbon_red.png", 40, 40)
     mwin.carbon = carbon
-    thermom = get_image("thermometer.png", 40, 40)
+    thermom = get_image("spectrum_finder/images/thermometer.png", 40, 40)
     mwin.thermom = thermom
 
     img_label1 = tk.Label(mwin, image=apple, borderwidth=0).grid(row=1, column=1, padx=0)
@@ -206,7 +198,7 @@ def create_display(mwin,tk,grav,metal,temp,grav_lo_N,metal_lo,temp_lo_N,grav_hi_
         xysys_sdx = xysys_x+1
         xysys_sdy = xyzsys_zboost+431
 
-    cubedot = get_images_combine("cube.PNG",1211,702,"dot.PNG",20,20,"shadow.PNG",18,10,xysys_x,xysys_y,xysys_sdx,xysys_sdy)
+    cubedot = get_images_combine("spectrum_finder/images/cube.PNG",1211,702,"spectrum_finder/images/dot.PNG",20,20,"spectrum_finder/images/shadow.PNG",18,10,xysys_x,xysys_y,xysys_sdx,xysys_sdy)
     mwin.cubedot = cubedot
 
     cubedotlabel = tk.Label(mwin, image = cubedot, borderwidth = 0, highlightthickness = 0)
