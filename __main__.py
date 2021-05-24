@@ -18,4 +18,4 @@ with open("output_g{}_t{},_a{}_{}.csv".format(grav,temp,metal,interp_par),"a", n
     for row in outputarray.T:
         writer.writerow(row)
 
-import gui2
+import spectrum_finder.gui.gui2
