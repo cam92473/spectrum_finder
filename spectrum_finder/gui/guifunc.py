@@ -72,7 +72,7 @@ def create_frames(mwin,tk):
 
     return frame12,frame22,frame32,frame14
 
-def create_widgets(mwin,tk,messagebox):
+def create_display1(mwin,tk,messagebox):
 
     #ctypes.windll.shcore.SetProcessDpiAwareness(1)
 
@@ -137,7 +137,7 @@ def create_widgets(mwin,tk,messagebox):
     button1 = tk.Button(mwin, font = ("Arial",12), text="Start", bd=4, relief=tk.RAISED, command = lambda: getinfoclose(mwin,tk,messagebox),padx = 25, pady = 15)
     button1.grid(rowspan=2, row=2, column=4)
 
-def create_display(mwin,tk,grav,metal,temp,grav_lo_N,metal_lo,temp_lo_N,grav_hi_N,metal_hi,temp_hi_N,interp_par,swim_dict):
+def create_display2(mwin,tk,grav,metal,temp,grav_lo_N,metal_lo,temp_lo_N,grav_hi_N,metal_hi,temp_hi_N,interp_par,swim_dict):
 
     ctypes.windll.shcore.SetProcessDpiAwareness(1)
 
